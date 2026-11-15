@@ -3,51 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SFPS Group | Enterprise Optical Transceivers & Networking Hardware UAE</title>
+  <title>SFPS.AE | UAE's Authority in Optical Networking & Enterprise Fiber</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="top-bar">
+    <div>
+      <span class="status-pill">● UAE ENG DESK ACTIVE</span>
+      <span>| Same-Day Dubai &amp; GCC Optical Transceiver Dispatch &amp; EEPROM Coding</span>
+    </div>
+    <div class="top-links">
+      <a href="tel:+971554405866">📞 +971 55 440 5866</a>
+      <a href="https://wa.me/971554405866" target="_blank">💬 Direct WhatsApp</a>
+      <a href="mailto:amir@sfps.ae?subject=Inquiry%20-%20SFPS.AE">✉️ amir@sfps.ae</a>
+    </div>
+  </div>
+
   <header>
-    <a href="index.html" class="logo">SFPS<span>.AE</span></a>
+    <a href="index.html" class="brand">
+      <div class="brand-icon">⚡</div>
+      <div class="brand-text">
+        <strong>SFPS.AE</strong>
+        <span>CONNECT NETWORKS</span>
+      </div>
+    </a>
     <nav>
       <a href="index.html" class="active">Home</a>
-      <a href="products.html">Optical Transceivers</a>
-      <a href="solutions.html">Cabling & Solutions</a>
-      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="solutions.html">Architectures</a>
+      <a href="about.html">Warranty &amp; About</a>
+      <a href="mailto:amir@sfps.ae?subject=Contact%20SFPS%20Engineering">Contact</a>
     </nav>
-    <a href="mailto:amir@sfps.ae?subject=Quote%20Request%20-%20SFPS.AE&body=Hello%20Amir%2C%0A%0APlease%20share%20pricing%20and%20availability%20for%3A%0A" class="btn-cta">GET A QUOTE</a>
+    <a href="mailto:amir@sfps.ae?subject=Quote%20Request%20-%20SFPS.AE&body=Hello%20Amir%2C%0A%0APlease%20share%20pricing%20and%20stock%20availability%20for%3A%0A" class="btn-quote">➤ Quote</a>
   </header>
 
-  <section class="hero">
-    <h1>Enterprise Optical Transceivers & IT Infrastructure Solutions</h1>
-    <p>British-led systems integration and high-compatibility SFP, SFP+, QSFP28, DWDM, and MPO networking hardware across the UAE and Middle East.</p>
-    <a href="mailto:amir@sfps.ae?subject=Urgent%20Hardware%20Inquiry%20-%20SFPS.AE&body=Hi%20Amir%2C%0A%0AWe%20are%20looking%20for%20a%20quote%20on%20the%20following%20part%20numbers%3A%0A" class="btn-cta">REQUEST A QUOTE NOW</a>
+  <section class="hero-split">
+    <div>
+      <div class="eyebrow-badge"><span>⚙</span> UAE CUSTOM EEPROM FIRMWARE PROGRAMMING &amp; LOCAL STOCK</div>
+      <h1>UAE's Authority in <span class="highlight">Optical Networking &amp; Enterprise Fiber</span></h1>
+      <p>Architecting ultra-low latency optical links across Dubai and the GCC. We supply 100% SFF-compliant 1G to 800G MSA transceivers, custom-coded EEPROM for OEM switches, passive DWDM DCI, and precision fiber cabling with local UAE dispatch.</p>
+      <div class="hero-actions">
+        <a href="mailto:amir@sfps.ae?subject=Urgent%20Quote%20Request%20-%20SFPS.AE&body=Hi%20Amir%2C%0A%0APlease%20quote%20the%20following%20part%20numbers%3A%0A" class="btn-quote">Request Instant Quote →</a>
+        <a href="products.html" class="btn-outline">Explore Transceiver Matrix</a>
+      </div>
+    </div>
+
+    <div class="telemetry-card">
+      <div class="telemetry-header">
+        <div class="telemetry-title"><span class="dot-green"></span> 400G / 100G Optical Telemetry Lab</div>
+        <span class="cli-tag">INTERACTIVE CLI</span>
+      </div>
+
+      <div class="form-group">
+        <label>Select Switch OEM Target</label>
+        <select id="oemSelect" onchange="updateTelemetry()">
+          <option value="cisco">Cisco NX-OS / Catalyst 9000 (SFP-10G / QSFP-100G)</option>
+          <option value="juniper">Juniper QFX / MX Series (JNP-QSFP-100G)</option>
+          <option value="arista">Arista EOS 7050X / 7280R (QSFP-100G-LR4)</option>
+          <option value="huawei">Huawei CloudEngine CE6800 / CE8800</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Optic Form Factor</label>
+          <select id="opticSelect" onchange="updateTelemetry()">
+            <option value="100g">100G QSFP28 (LR4)</option>
+            <option value="400g">400G QSFP-DD (DR4)</option>
+            <option value="25g">25G SFP28 (SR)</option>
+            <option value="10g">10G SFP+ (LR)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Target Fiber Distance</label>
+          <select id="distSelect" onchange="updateTelemetry()">
+            <option value="10km">10km (OS2 Singlemode)</option>
+            <option value="40km">40km (OS2 Extended)</option>
+            <option value="100m">100m (OM4 Multimode)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="telemetry-readout">
+        <div class="readout-top">
+          <span>LIVE SFF-8472 TELEMETRY</span>
+          <span class="signal-optimal">📶 SIGNAL OPTIMAL</span>
+        </div>
+        <div class="readout-grid">
+          <div><span>Tx Power:</span> <strong id="txVal">+1.5 dBm</strong></div>
+          <div><span>Rx Power:</span> <strong id="rxVal">-3.7 dBm</strong></div>
+          <div><span>Temp:</span> <strong id="tempVal">33.1°C</strong></div>
+          <div><span>Bit Error Rate:</span> <strong id="berVal">1.1e-12</strong></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="section">
-    <h2 class="section-title">Core Hardware & Infrastructure</h2>
-    <div class="grid">
+    <h2 class="section-title">Core Optical &amp; Infrastructure Divisions</h2>
+    <p class="section-sub">100% switch-verified hardware stocked in Dubai for same-day UAE &amp; rapid GCC delivery.</p>
+    <div class="grid-3">
       <div class="card">
-        <h3>Optical Transceivers</h3>
-        <p>1G SFP, 10G SFP+, 25G SFP28, 40G QSFP+, and 100G/400G QSFP28 modules 100% coded and tested for Cisco, Juniper, Arista, Huawei, and Dell.</p>
-        <a href="products.html" class="card-link">Explore Transceivers →</a>
+        <h3>1G – 800G Optical Transceivers</h3>
+        <p>Custom EEPROM-programmed SFP, SFP+, SFP28, QSFP+, QSFP28, and QSFP-DD modules tested across Cisco, Juniper, Arista, Huawei, and Dell.</p>
+        <a href="products.html" class="card-link">View Transceiver Specs →</a>
       </div>
       <div class="card">
-        <h3>Structured Cabling & MPO</h3>
-        <p>High-density OM3/OM4/OS2 fiber patch cords, MPO/MTP trunk cables, and Cat6/Cat6A enterprise data center cabling.</p>
-        <a href="solutions.html" class="card-link">View Cabling Solutions →</a>
+        <h3>MPO/MTP &amp; Structured Fiber</h3>
+        <p>Low-loss elite OM4/OS2 MPO trunks, breakout harnesses, LC/SC duplex patch cords, and high-density 19" rackmount ODF enclosures.</p>
+        <a href="solutions.html" class="card-link">View Cabling Architectures →</a>
       </div>
       <div class="card">
-        <h3>WDM & Data Center Switches</h3>
-        <p>CWDM/DWDM Mux/Demux systems, Direct Attach Copper (DAC), Active Optical Cables (AOC), and enterprise switches.</p>
-        <a href="mailto:amir@sfps.ae?subject=Technical%20Consultation%20-%20SFPS.AE" class="card-link">Consult an Engineer →</a>
+        <h3>Passive DWDM &amp; DCI Systems</h3>
+        <p>1U rackmount 8ch/16ch/40ch DWDM Mux-Demux, optical line protection, and coherent long-haul transceivers up to 120km.</p>
+        <a href="mailto:amir@sfps.ae?subject=DWDM%20Link%20Engineering%20Inquiry" class="card-link">Request Link Budget →</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p><strong>SFPS Group UAE</strong> — Enterprise Networking & Optical Hardware</p>
-    <p style="margin-top: 0.5rem;">Direct Sales & Quotes: <a href="mailto:amir@sfps.ae">amir@sfps.ae</a></p>
+    <p><strong>SFPS.AE — CONNECT NETWORKS</strong> | Dubai &amp; GCC Enterprise Optical Hardware</p>
+    <p style="margin-top: 0.5rem;">Direct Engineering &amp; Quotes: <a href="mailto:amir@sfps.ae">amir@sfps.ae</a></p>
   </footer>
+
+  <script>
+    function updateTelemetry() {
+      const optic = document.getElementById('opticSelect').value;
+      const dist = document.getElementById('distSelect').value;
+      const data = {
+        '100g': { tx: '+1.5 dBm', rx: dist === '40km' ? '-6.2 dBm' : '-3.7 dBm', temp: '33.1°C', ber: '1.1e-12' },
+        '400g': { tx: '+2.1 dBm', rx: '-2.9 dBm', temp: '36.4°C', ber: '2.4e-13' },
+        '25g':  { tx: '-0.8 dBm', rx: '-2.1 dBm', temp: '29.8°C', ber: '1.0e-12' },
+        '10g':  { tx: '-1.2 dBm', rx: '-3.4 dBm', temp: '28.5°C', ber: '1.0e-12' }
+      };
+      document.getElementById('txVal').textContent = data[optic].tx;
+      document.getElementById('rxVal').textContent = data[optic].rx;
+      document.getElementById('tempVal').textContent = data[optic].temp;
+      document.getElementById('berVal').textContent = data[optic].ber;
+    }
+  </script>
 </body>
 </html>
