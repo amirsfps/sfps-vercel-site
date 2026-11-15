@@ -1,0 +1,52 @@
+/* Data Tables & Specification Badges */
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  background: var(--bg-white);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: var(--navy-primary);
+  color: #FFFFFF;
+  padding: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+td {
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-dark);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: var(--bg-light);
+}
+
+.badge {
+  display: inline-block;
+  background-color: #EEF4FF;
+  color: var(--electric-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.btn-sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+}
